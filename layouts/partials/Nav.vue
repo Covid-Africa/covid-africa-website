@@ -9,8 +9,12 @@
       </b-navbar-item>
     </template>
     <template slot="end" class="has-text-primary">
-      <b-navbar-item href="#">API</b-navbar-item>
-      <b-navbar-item href="#">A propos</b-navbar-item>
+      <b-navbar-item>
+        <nuxt-link to="/api">API</nuxt-link>
+      </b-navbar-item>
+      <b-navbar-item>
+        <nuxt-link to="/apropos">A propos</nuxt-link>
+      </b-navbar-item>
       <b-navbar-item tag="div">
         <span class="lang-links">
           <a class="lang-link">FR</a>
