@@ -9,11 +9,13 @@
 <script>
 import Nav from "./partials/Nav.vue";
 import Footer from "./partials/Footer.vue";
+import AfricaChart from "~/components/AfricaChart.vue";
 
 export default {
   components: {
     Nav,
-    Footer
+    Footer,
+    AfricaChart
   }
 };
 </script>

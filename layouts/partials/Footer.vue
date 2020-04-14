@@ -26,3 +26,9 @@
     </div>
   </footer>
 </template>
+
+<style lang="css">
+.footer {
+  border-radius: 18px;
+}
+</style>
