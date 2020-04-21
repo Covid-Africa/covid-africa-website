@@ -1,5 +1,16 @@
 <template>
   <section class="section">
+    <div class="container columns">
+      <div class="column"></div>
+      <div class="column">
+        <LineChart />
+      </div>
+    </div>
+
+    <div class="container">
+      <StatisticsNumber />
+    </div>
+
     <div class="container">
       <Table />
     </div>
@@ -26,7 +37,8 @@
               <a
                 href="https://www.who.int/topics/coronavirus_infections/fr/"
                 class="button is-info is-outlined is-small"
-              >Savoir-plus</a>
+                >Savoir-plus</a
+              >
             </div>
           </div>
         </div>
@@ -50,7 +62,8 @@
               <a
                 href="https://www.who.int/fr/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
                 class="button is-info is-outlined is-small"
-              >Savoir-plus</a>
+                >Savoir-plus</a
+              >
             </div>
           </div>
         </div>
@@ -68,7 +81,9 @@
               accusantium ducimus aspernatur blanditiis
             </div>
             <div class="has-item-centered">
-              <a href class="button is-info is-outlined is-small">Savoir-plus</a>
+              <a href class="button is-info is-outlined is-small"
+                >Savoir-plus</a
+              >
             </div>
           </div>
         </div>
@@ -80,11 +95,15 @@
 <script>
 // import Card from "~/components/Card";
 import Table from "~/components/Table";
+import StatisticsNumber from "~/components/StatisticsNumber.vue";
+import LineChart from "~/components/LineChart.vue";
 export default {
   name: "HomePage",
 
   components: {
-    Table
+    Table,
+    StatisticsNumber,
+    LineChart
   }
 };
 </script>

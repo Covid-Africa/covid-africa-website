@@ -11,28 +11,28 @@
       :sort-multiple-key="customKey"
     >
       <template slot-scope="props">
-        <b-table-column field="name" label="Pays" sortable searchable>{{ props.row.name }}</b-table-column>
-        <b-table-column
-          field="case_number"
-          label="Nombres de cas"
-          sortable
-        >{{ props.row.case_number }}</b-table-column>
-        <b-table-column
-          field="case_death"
-          label="Nombre de décès"
-          sortable
-        >{{ props.row.case_death }}</b-table-column>
+        <b-table-column field="name" label="Pays" sortable searchable>{{
+          props.row.name
+        }}</b-table-column>
+        <b-table-column field="case_number" label="Nombres de cas" sortable>{{
+          props.row.case_number
+        }}</b-table-column>
+        <b-table-column field="case_death" label="Nombre de décès" sortable>{{
+          props.row.case_death
+        }}</b-table-column>
         <b-table-column
           field="case_recovered"
           label="Nombre de guéris"
           sortable
-        >{{ props.row.case_recovered }}</b-table-column>
+          >{{ props.row.case_recovered }}</b-table-column
+        >
       </template>
     </b-table>
   </div>
 </template>
 
 <script>
+import API_URL from "../store/api.js";
 import orderBy from "lodash/orderBy";
 import axios from "axios";
 
@@ -103,9 +103,13 @@ export default {
     }
   },
   created() {
-    axios.get(`http://127.0.0.1:8000/api/countries`).then(response => {
+    axios.get(`http://localhost:8000/api/africa/countries`).then(response => {
       this.data = response.data;
     });
+
+    /*axios.get(`http://localhost:8000/api/africa`).then(response => {
+      this.data_new_case = response.data
+    });*/
   }
 };
 </script>
