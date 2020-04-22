@@ -1,8 +1,8 @@
 <template>
   <section class="section">
-    <div class="container columns">
-      <div class="column"></div>
-      <div class="column">
+    <div class="container">
+      <div class="columns container">
+        <GeoChart />
         <LineChart />
       </div>
     </div>
@@ -34,11 +34,8 @@
               </p>
             </div>
             <div class="has-item-centered">
-              <a
-                href="https://www.who.int/topics/coronavirus_infections/fr/"
-                class="button is-info is-outlined is-small"
-                >Savoir-plus</a
-              >
+              <a href="https://www.who.int/topics/coronavirus_infections/fr/"
+                class="button is-info is-outlined is-small">Savoir-plus</a>
             </div>
           </div>
         </div>
@@ -59,11 +56,8 @@
               </p>
             </div>
             <div class="has-item-centered">
-              <a
-                href="https://www.who.int/fr/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
-                class="button is-info is-outlined is-small"
-                >Savoir-plus</a
-              >
+              <a href="https://www.who.int/fr/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+                class="button is-info is-outlined is-small">Savoir-plus</a>
             </div>
           </div>
         </div>
@@ -81,9 +75,7 @@
               accusantium ducimus aspernatur blanditiis
             </div>
             <div class="has-item-centered">
-              <a href class="button is-info is-outlined is-small"
-                >Savoir-plus</a
-              >
+              <a href class="button is-info is-outlined is-small">Savoir-plus</a>
             </div>
           </div>
         </div>
@@ -97,13 +89,15 @@
 import Table from "~/components/Table";
 import StatisticsNumber from "~/components/StatisticsNumber.vue";
 import LineChart from "~/components/LineChart.vue";
+import GeoChart from "~/components/GeoChart.vue";
 export default {
   name: "HomePage",
 
   components: {
     Table,
     StatisticsNumber,
-    LineChart
+    LineChart,
+    GeoChart
   }
 };
 </script>

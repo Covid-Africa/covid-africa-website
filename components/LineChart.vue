@@ -1,47 +1,49 @@
 <template>
   <div class="column">
-    <div id="linechart" style="width: 900px; height: 500px;"></div>
+    <line-chart v-if="loaded" :chart-data="datacollection" :chart-labels="labels"></line-chart>
   </div>
 </template>
 
 <script>
-import "@google-web-components/google-chart";
 import axios from "axios";
+import LineChart from "./Chart.vue";
+
 export default {
+  components: {
+    LineChart
+  },
+      props: {},
+
   data() {
     return {
-      responseData: []
+      datacollection: null,
+      labels:[],
+      dates:[],
+      total_cases:[],
+      total_deaths:[],
+      loaded: false,
     };
   },
-
   methods: {
-    drawLines() {
-      var data = new google.visualization.DataTable();
-
-      data.addColumn("string", "Date");
-      data.addColumn("number", "Nombres");
-
-      this.responseData.forEach(function(json) {
-        data.addRow([json[0], json[1]]);
-      });
-
-      var options = {
-        title: "Graphiques"
-      };
-
-      var chart = new google.visualization.LineChart(
-        document.getElementById(`linechart`)
-      );
-      chart.draw(data, options);
-    }
+  
   },
 
   created() {
-    axios.get(`http://localhost:8000/api/africa`).then(response => {
-      this.responseData = response.data;
-    });
-  }
+    axios.get('http://localhost:8000/api/africa').then(
+      response => {
+        var datacollection = response.data;
+        this.total_cases = response.data.map(total_case => total_case.total_cases);
+        this.total_deaths = response.data.map(total_death => total_death.total_deaths);
+        this.labels = response.data.map(date => date.dates);
+
+        this.loaded = true;
+
+        this.datacollection = {
+              total_cases : this.total_cases,
+              total_deaths : this.total_deaths          
+            };
+      }
+    )
+  },
 };
 </script>
-
-<style lang="css"></style>
