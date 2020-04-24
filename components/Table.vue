@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fancy_card">
     <b-table
       :data="data"
       ref="multiSortTable"
@@ -9,6 +9,7 @@
       :sort-multiple="multiColumnSortingEnabled"
       :sort-multiple-data="sortingPrioirty"
       :sort-multiple-key="customKey"
+      :sticky-header="stickyHeaders"
     >
       <template slot-scope="props">
         <b-table-column field="name" label="Pays" sortable searchable>{{
@@ -43,7 +44,8 @@ export default {
       backendSortingEnabled: false,
       multiColumnSortingEnabled: true,
       data: [],
-      sortingPrioirty: []
+      sortingPrioirty: [],
+      stickyHeaders: true
     };
   },
   methods: {
@@ -103,9 +105,11 @@ export default {
     }
   },
   created() {
-    axios.get(`https://covidafrica-api.herokuapp.com/api/africa/countries`).then(response => {
-      this.data = response.data;
-    });
+    axios
+      .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
+      .then(response => {
+        this.data = response.data;
+      });
 
     /*axios.get(`http://localhost:8000/api/africa`).then(response => {
       this.data_new_case = response.data

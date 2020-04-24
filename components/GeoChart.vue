@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="fancy_card">
     <div id="tree">
       <GChart
         :settings="{
@@ -11,6 +11,9 @@
         type="GeoChart"
         :data="chartData"
       />
+    </div>
+    <div class="content has-text-link">
+      <a href="#">Map View</a>
     </div>
   </div>
 </template>
@@ -33,7 +36,6 @@ export default {
   },
   methods: {
     drawChart() {
-
       this.chartData = new google.visualization.DataTable();
 
       this.chartData.addColumn("string", "Name");
@@ -69,7 +71,7 @@ export default {
 
           this.data.push([element.name, element.case_number]);
         }
-        console.log(JSON.parse(JSON.stringify(this.data)));
+        //console.log(JSON.parse(JSON.stringify(this.data)));
       });
   }
 };

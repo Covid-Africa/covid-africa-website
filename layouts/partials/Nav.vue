@@ -1,5 +1,5 @@
 <template>
-  <b-navbar>
+  <b-navbar class="box-shadow" id="nav">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -28,3 +28,9 @@
     </template>
   </b-navbar>
 </template>
+
+<style lang="css">
+#nav {
+  border-radius: 12px;
+}
+</style>
