@@ -103,7 +103,7 @@ export default {
     }
   },
   created() {
-    axios.get(`http://localhost:8000/api/africa/countries`).then(response => {
+    axios.get(`https://covidafrica-api.herokuapp.com/api/africa/countries`).then(response => {
       this.data = response.data;
     });
 

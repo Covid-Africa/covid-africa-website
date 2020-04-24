@@ -51,7 +51,7 @@ export default {
   },
 
   created() {
-    axios.get(`http://localhost:8000/api/africa`).then(response => {
+    axios.get(`https://covidafrica-api.herokuapp.com/api/africa`).then(response => {
       var data_temp = response.data;
 
       this.data = data_temp[data_temp.length - 1];
@@ -59,7 +59,7 @@ export default {
       this.death_rate = this.death_rate.toFixed(2);
     });
 
-    axios.get(`http://localhost:8000/api/africa/countries`).then(response => {
+    axios.get(`https://covidafrica-api.herokuapp.com/api/africa/countries`).then(response => {
       this.country_len = response.data.length;
       var sum = 0;
 

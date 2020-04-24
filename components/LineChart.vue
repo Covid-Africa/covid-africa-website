@@ -7,7 +7,6 @@
 <script>
 import axios from "axios";
 import LineChart from "./Chart.vue";
-
 export default {
   components: {
     LineChart
@@ -29,7 +28,7 @@ export default {
   },
 
   created() {
-    axios.get('http://localhost:8000/api/africa').then(
+    axios.get('http://covidafrica-api.herokuapp.com/api/africa').then(
       response => {
         var datacollection = response.data;
         this.total_cases = response.data.map(total_case => total_case.total_cases);
