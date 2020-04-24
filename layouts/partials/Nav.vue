@@ -8,12 +8,15 @@
         />
       </b-navbar-item>
     </template>
-    <template slot="end" class="has-text-primary">
+    <template slot="end" class="has-text-primary has-text-centered-mobile">
+      <b-navbar-item>
+        <nuxt-link to="/">HOME</nuxt-link>
+      </b-navbar-item>
       <b-navbar-item>
         <nuxt-link to="/api">API</nuxt-link>
       </b-navbar-item>
       <b-navbar-item>
-        <nuxt-link to="/apropos">A propos</nuxt-link>
+        <nuxt-link to="/apropos">ABOUT</nuxt-link>
       </b-navbar-item>
       <b-navbar-item tag="div">
         <span class="lang-links">
