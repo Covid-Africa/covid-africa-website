@@ -60,8 +60,10 @@ export default {
 </script>
 
 <style lang="css">
-.linearchart {
-  width: 522px;
-  height: 345px;
+@media (min-width: 768px) {
+  .linearchart {
+    width: 522px;
+    height: 345px;
+  }
 }
 </style>

@@ -2,13 +2,11 @@
   <section class="section">
     <div
       class="title is-4 has-text-centered has-text-grey-darker is-large is-uppercase"
-    >
-      COVID-19 CORONAVIRUS PANDEMIC
-    </div>
+    >COVID-19 CORONAVIRUS PANDEMIC</div>
     <div class="container auto-margin">
       <hr class="rounded" />
 
-      <div class="columns container">
+      <div class="columns">
         <div class="column">
           <GeoChart />
         </div>
@@ -28,9 +26,7 @@
       <hr class="rounded" />
     </div>
 
-    <div class="title is-4 has-text-centered has-text-grey-darker">
-      WHAT TO KNOW ABOUT COVID-19?
-    </div>
+    <div class="title is-4 has-text-centered has-text-grey-darker">WHAT TO KNOW ABOUT COVID-19?</div>
 
     <div class="columns auto-margin">
       <div class="column">
@@ -53,8 +49,7 @@
               <a
                 href="https://www.who.int/topics/coronavirus_infections/fr/"
                 class="button is-link is-outlined"
-                >Learn more</a
-              >
+              >Learn more</a>
             </div>
           </div>
         </div>
@@ -78,8 +73,7 @@
               <a
                 href="https://www.who.int/fr/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
                 class="button is-link is-outlined"
-                >More</a
-              >
+              >More</a>
             </div>
           </div>
         </div>
@@ -93,8 +87,7 @@
           </div>
           <div class="card-content">
             <div class="content has-text-centered">
-              <h4 class="title is-4">About COVID-19</h4>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
+              <h4 class="title is-4">About COVID-19</h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
               accusantium ducimus aspernatur blanditiis. Lorem ipsum, dolor sit
               amet consectetur adipisicing elit. Dolorem accusantium
             </div>
