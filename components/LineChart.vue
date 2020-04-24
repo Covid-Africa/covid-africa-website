@@ -47,7 +47,7 @@ export default {
         this.total_deaths = response.data.map(
           total_death => total_death.total_deaths
         );
-        this.labels = response.data.map(date => date.date);
+        this.labels = response.data.map(date => date.dates);
 
         this.datacollection = {
           total_cases: this.total_cases,
