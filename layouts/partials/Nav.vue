@@ -1,5 +1,5 @@
 <template>
-  <b-navbar>
+  <b-navbar class="box-shadow" id="nav">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -8,12 +8,15 @@
         />
       </b-navbar-item>
     </template>
-    <template slot="end" class="has-text-primary">
+    <template slot="end" class="has-text-primary has-text-centered-mobile">
+      <b-navbar-item>
+        <nuxt-link to="/">HOME</nuxt-link>
+      </b-navbar-item>
       <b-navbar-item>
         <nuxt-link to="/api">API</nuxt-link>
       </b-navbar-item>
       <b-navbar-item>
-        <nuxt-link to="/apropos">A propos</nuxt-link>
+        <nuxt-link to="/apropos">ABOUT</nuxt-link>
       </b-navbar-item>
       <b-navbar-item tag="div">
         <span class="lang-links">
@@ -25,3 +28,9 @@
     </template>
   </b-navbar>
 </template>
+
+<style lang="css">
+#nav {
+  border-radius: 12px;
+}
+</style>
