@@ -1,37 +1,37 @@
 <template>
   <div class="container auto-margin">
-    <div class="title is-4 has-text-grey-darker has-text">
-      Latest updates {{ update_date }} hours ago ...
-    </div>
+    <div
+      class="title is-4 has-text-grey-darker has-text"
+    >Latest updates {{ update_date }} hours ago ...</div>
     <div class="columns" v-if="loaded && loaded_two">
       <div class="column has-text-centered">
         <div class="content">
-          <h3 class="title is-3 has-text-grey-light">Cas confirmés</h3>
-          <h2 class="title is-2">{{ data.total_cases }}</h2>
+          <h3 class="title is-3 has-text-grey-light">Cases confirmed</h3>
+          <h2 class="title is-2">{{ case_number }}</h2>
 
-          <h3 class="title is-3 has-text-grey-light">Pays touchés</h3>
+          <h3 class="title is-3 has-text-grey-light">Countries</h3>
 
-          <h2 class="title is-2">{{ country_len - 2 }}</h2>
+          <h2 class="title is-2">{{ country_len -2 }} / 56</h2>
         </div>
       </div>
       <div class="column has-text-centered">
         <div class="content">
-          <h3 class="title is-3 has-text-grey-light">Personnes guéries</h3>
+          <h3 class="title is-3 has-text-grey-light">Case recovered</h3>
           <h2 class="title is-2 has-text-success">{{ recovered_rate }}</h2>
 
-          <h3 class="title is-3 has-text-grey-light">Taux de guérison</h3>
+          <h3 class="title is-3 has-text-grey-light">Recovery rate</h3>
 
-          <h2 class="title is-2 has-text-success">
-            {{ ((recovered_rate / data.total_cases) * 100).toFixed(2) }}
-          </h2>
+          <h2
+            class="title is-2 has-text-success"
+          >{{ ((recovered_rate / data.total_cases) * 100).toFixed(2) }} %</h2>
         </div>
       </div>
       <div class="column has-text-centered">
         <div class="content">
-          <h3 class="title is-3 has-text-grey-light">Nombre de décès</h3>
+          <h3 class="title is-3 has-text-grey-light">Deaths confirmed</h3>
           <h2 class="title is-2 has-text-danger">{{ data.total_deaths }}</h2>
 
-          <h3 class="title is-3 has-text-grey-light">Taux de décès</h3>
+          <h3 class="title is-3 has-text-grey-light">Death rate</h3>
 
           <h2 class="title is-2 has-text-danger">{{ death_rate }} %</h2>
         </div>
@@ -52,7 +52,8 @@ export default {
       recovered_rate: 0,
       update_date: null,
       loaded: false,
-      loaded_two: false
+      loaded_two: false,
+      case_number: null
     };
   },
 
@@ -87,11 +88,13 @@ export default {
       .then(response => {
         this.country_len = response.data.length;
         var sum = 0;
-
+        var sum2 = 0;
         for (let index = 0; index < response.data.length; index++) {
           sum += response.data[index].case_recovered;
+          sum2 += response.data[index].case_number;
         }
         this.recovered_rate = sum;
+        this.case_number = sum2;
         this.loaded_two = true;
       });
   }

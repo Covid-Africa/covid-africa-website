@@ -16,7 +16,7 @@
         <nuxt-link to="/api">API</nuxt-link>
       </b-navbar-item>
       <b-navbar-item>
-        <nuxt-link to="/apropos">ABOUT</nuxt-link>
+        <nuxt-link to="/contact">CONTACT</nuxt-link>
       </b-navbar-item>
       <b-navbar-item tag="div">
         <span class="lang-links">
