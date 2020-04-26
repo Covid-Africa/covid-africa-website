@@ -55,7 +55,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-ssr-cache', ,
+    //'nuxt-ssr-cache', ,
   ],
   /*
    ** Axios module configuration
@@ -71,17 +71,4 @@ export default {
      */
     extend(config, ctx) {}
   },
-
-  //Cache configuration
-  cache: {
-    useHostPrefix: false,
-    pages: [
-      '/',
-    ],
-  },
-  store: {
-    type: 'memcached',
-    max: 100,
-    ttl: 43200,
-  }
 }
