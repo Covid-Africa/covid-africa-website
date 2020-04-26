@@ -2,7 +2,7 @@
   <div class="container auto-margin">
     <div
       class="title is-4 has-text-grey-darker has-text"
-    >Latest updates {{ update_date }} hours ago ...</div>
+    >Latest updates {{ timeConvert(update_date) }} ago ...</div>
     <div class="columns" v-if="loaded && loaded_two">
       <div class="column has-text-centered">
         <div class="content">
@@ -56,7 +56,16 @@ export default {
       case_number: null
     };
   },
-
+  methods: {
+    timeConvert(n) {
+      var num = n;
+      var hours = num / 60;
+      var rhours = Math.floor(hours);
+      var minutes = (hours - rhours) * 60;
+      var rminutes = Math.round(minutes);
+      return rminutes + " minute(s)";
+    }
+  },
   created() {
     axios
       .get(`https://covidafrica-api.herokuapp.com/api/africa`)
@@ -77,7 +86,7 @@ export default {
         var microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
         // Number of milliseconds per day =
         //   24 hrs/day * 60 minutes/hour * 60 seconds/minute * 1000 msecs/second
-        this.update_date = Math.floor(microSecondsDiff / (1000 * 60 * 60));
+        this.update_date = Math.floor(microSecondsDiff / 60 / 60 / 24);
         //console.log(this.update_date)
 
         this.loaded = true;

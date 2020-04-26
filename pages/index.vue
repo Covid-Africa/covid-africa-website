@@ -119,6 +119,25 @@ export default {
     LineChart,
     GeoChart,
     AllCharts
+  },
+
+  head() {
+    return {
+      title: "Covid Africa Live Updates : Charts, Map & Statistics",
+      meta: [
+        {
+          hid: `description`,
+          name: "description",
+          content:
+            "Statistics, Charts and Interactive Maps of COVID Evolution in Africa"
+        },
+        {
+          hid: `keywords`,
+          name: "keywords",
+          keywords: "live, tracker, covid, africa, covid19, data, maps"
+        }
+      ]
+    };
   }
 };
 </script>

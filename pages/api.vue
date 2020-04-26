@@ -147,7 +147,24 @@
 
 <script>
 export default {
-  transiton: "tweakOpacity"
+  transiton: "tweakOpacity",
+  head() {
+    return {
+      title: "COVID Africa : API & historical data",
+      meta: [
+        {
+          hid: `description`,
+          name: "description",
+          content: "API and Data for evolution of COVID in Africa"
+        },
+        {
+          hid: `keywords`,
+          name: "keywords",
+          keywords: "api, covid19, africa, covidafrica, data"
+        }
+      ]
+    };
+  }
 };
 </script>
 
