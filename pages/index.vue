@@ -2,7 +2,9 @@
   <section class="section">
     <div
       class="title is-4 has-text-centered has-text-grey-darker is-large is-uppercase"
-    >COVID-19 PANDEMIC in Africa</div>
+    >
+      COVID-19 PANDEMIC in Africa
+    </div>
     <div class="container auto-margin">
       <hr class="rounded" />
 
@@ -26,7 +28,9 @@
       <hr class="rounded" />
     </div>
 
-    <div class="title is-4 has-text-centered has-text-grey-darker">WHAT TO KNOW ABOUT COVID-19?</div>
+    <div class="title is-4 has-text-centered has-text-grey-darker">
+      WHAT TO KNOW ABOUT COVID-19?
+    </div>
 
     <div class="columns auto-margin">
       <div class="column">
@@ -49,7 +53,8 @@
               <a
                 href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/faq.html"
                 class="button is-link is-outlined"
-              >Learn more</a>
+                >Learn more</a
+              >
             </div>
           </div>
         </div>
@@ -73,7 +78,8 @@
               <a
                 href="https://www.unicef.org/coronavirus/cleaning-and-hygiene-tips-help-keep-coronavirus-covid-19-out-your-home"
                 class="button is-link is-outlined"
-              >More</a>
+                >More</a
+              >
             </div>
           </div>
         </div>
@@ -89,8 +95,9 @@
             <div class="content has-text-centered">
               <h4 class="title is-4">About COVID-19</h4>
               <p>
-                See the spread of the Novel Coronavirus from February 14,
-                2020 to current day in a map visualization to understand the rate of growth and global impact the virus has had thus far in Africa.
+                See the spread of the Novel Coronavirus from February 14, 2020
+                to current day in a map visualization to understand the rate of
+                growth and global impact the virus has had thus far in Africa.
               </p>
             </div>
             <div class="has-item-centered">

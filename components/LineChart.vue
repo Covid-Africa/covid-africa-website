@@ -17,7 +17,7 @@
 
 <script>
 import axios from "axios";
-import LineChart from "./Chart.vue";
+import LineChart from "./Line.vue";
 export default {
   components: {
     LineChart
