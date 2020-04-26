@@ -17,18 +17,18 @@
           props.row.name
           }}
         </b-table-column>
-        <b-table-column field="case_number" label="Cases number" sortable>
+        <b-table-column field="caseNumber" label="Cases number" sortable>
           {{
           props.row.case_number
           }}
         </b-table-column>
-        <b-table-column field="case_death" label="Deaths number" sortable>
+        <b-table-column field="caseDeath" label="Deaths number" sortable>
           {{
           props.row.case_death
           }}
         </b-table-column>
         <b-table-column
-          field="case_recovered"
+          field="caseRecovered"
           label="Cases recovered"
           sortable
         >{{ props.row.case_recovered }}</b-table-column>

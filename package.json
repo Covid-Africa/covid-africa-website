@@ -20,6 +20,7 @@
     "d3": "^5.15.1",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
+    "nuxt-ssr-cache": "^1.5.1",
     "vue-chartjs": "^3.5.0",
     "vue-google-charts": "^0.3.2",
     "vue-meta": "^2.3.3"

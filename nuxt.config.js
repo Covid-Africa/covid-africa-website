@@ -55,6 +55,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-ssr-cache', ,
   ],
   /*
    ** Axios module configuration
@@ -69,5 +70,18 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  //Cache configuration
+  cache: {
+    useHostPrefix: false,
+    pages: [
+      '/',
+    ],
+  },
+  store: {
+    type: 'memory',
+    max: 100,
+    ttl: 43200, //12 hours
   }
 }
