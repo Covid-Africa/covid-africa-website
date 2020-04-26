@@ -80,8 +80,8 @@ export default {
     ],
   },
   store: {
-    type: 'memory',
+    type: 'memcached',
     max: 100,
-    ttl: 43200, //12 hours
+    ttl: 43200,
   }
 }
