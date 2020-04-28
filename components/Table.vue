@@ -22,6 +22,11 @@
           props.row.case_number
           }}
         </b-table-column>
+        <b-table-column field="activeCase" label="Active Cases" sortable>
+          {{
+          props.row.active_case
+          }}
+        </b-table-column>
         <b-table-column field="caseDeath" label="Deaths number" sortable>
           {{
           props.row.case_death
