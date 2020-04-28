@@ -6,7 +6,9 @@
         <div
           class="content has-text-centered"
         >Please, fill this form for suggestion, question or any opinions.</div>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" action="/" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+
           <b-field label="Name">
             <b-input placeholder="Name" type="text" name="name" maxlength="30"></b-input>
           </b-field>
