@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+
+<head {{ HEAD_ATTRS }}>
+  {{ HEAD }}
+</head>
+
+<body {{ BODY_ATTRS }}>
+  <form name="contact" method="POST" action="/" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+
+    <b-field label="Name">
+      <b-input placeholder="Name" type="text" name="name" maxlength="30"></b-input>
+    </b-field>
+    <b-field label="Email">
+      <b-input placeholder="Email" type="email" name="email" maxlength="30"></b-input>
+    </b-field>
+
+    <b-field label="Message">
+      <b-input name="message" type="textarea" minlength="10" maxlength="500" placeholder="Your message here">
+      </b-input>
+    </b-field>
+    <button class="button is-link" type="submit">Send</button>
+  </form>
+  {{ APP }}
+</body>
+
+</html>
