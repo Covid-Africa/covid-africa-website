@@ -1,14 +1,11 @@
 <template name="Footer">
   <footer class="footer">
     <div class="columns">
-      <div class="column has-element-at-center">
-        <figure class="image is-64x64">
-          <img
-            src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-            alt="Lightweight UI components for Vue.js based on Bulma"
-          />
+      <div class="column has-text-centered">
+        <span>
+          <h3 class="title is-3 has-text-link">COVID AFRICA</h3>
           <hr class="rounded" />
-        </figure>
+        </span>
       </div>
       <div class="column">
         <div class="content has-text-centered-mobile">
