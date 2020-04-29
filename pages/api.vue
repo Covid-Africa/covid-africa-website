@@ -125,15 +125,21 @@
             <ul>
               <li>
                 <h5 class="title is-5 has-text-grey-dark">Full data</h5>
-                <a href="#">full_data.csv</a>
+                <a
+                  href="https://github.com/Covid-Africa/covid-africa-api/tree/master/data"
+                >full_data.csv</a>
               </li>
               <li>
                 <h5 class="title is-5 has-text-grey-dark">Current Africa Data</h5>
-                <a href="#">current_africa.csv</a>
+                <a
+                  href="https://github.com/Covid-Africa/covid-africa-api/tree/master/data"
+                >current_africa.csv</a>
               </li>
               <li>
                 <h5 class="title is-5 has-text-grey-dark">Data since the Beginning of COVID-19</h5>
-                <a href="#">historical_data.csv</a>
+                <a
+                  href="https://github.com/Covid-Africa/covid-africa-api/tree/master/data"
+                >historical_data.csv</a>
               </li>
             </ul>
           </div>

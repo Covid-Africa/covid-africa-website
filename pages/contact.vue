@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="columns has-item-centered auto-margin">
-      <div class="column is-7">
+      <div class="column is-7 is-10-mobile">
         <h4 class="title is-4 has-text-centered has-text-grey-darker is-uppercase">Get in touch</h4>
         <div
           class="content has-text-centered"

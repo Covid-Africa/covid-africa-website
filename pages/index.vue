@@ -2,9 +2,7 @@
   <section class="section">
     <div
       class="title is-4 has-text-centered has-text-grey-darker is-large is-uppercase"
-    >
-      COVID-19 PANDEMIC in Africa
-    </div>
+    >COVID-19 PANDEMIC in Africa</div>
     <div class="container auto-margin">
       <hr class="rounded" />
 
@@ -28,13 +26,11 @@
       <hr class="rounded" />
     </div>
 
-    <div class="title is-4 has-text-centered has-text-grey-darker">
-      WHAT TO KNOW ABOUT COVID-19?
-    </div>
+    <div class="title is-4 has-text-centered has-text-grey-darker">WHAT TO KNOW ABOUT COVID-19?</div>
 
     <div class="columns auto-margin">
       <div class="column">
-        <div class="card fancy_card">
+        <div class="card cards fancy_card">
           <div class="card-image has-item-centered">
             <figure class="image is-128x128">
               <img src="~/assets/img/virus.svg" alt />
@@ -53,14 +49,13 @@
               <a
                 href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/faq.html"
                 class="button is-link is-outlined"
-                >Learn more</a
-              >
+              >Learn more</a>
             </div>
           </div>
         </div>
       </div>
       <div class="column">
-        <div class="card fancy_card">
+        <div class="card cards fancy_card">
           <div class="card-image has-item-centered">
             <figure class="image is-128x128">
               <img src="~/assets/img/coronavirus.svg" alt />
@@ -78,14 +73,13 @@
               <a
                 href="https://www.unicef.org/coronavirus/cleaning-and-hygiene-tips-help-keep-coronavirus-covid-19-out-your-home"
                 class="button is-link is-outlined"
-                >More</a
-              >
+              >More</a>
             </div>
           </div>
         </div>
       </div>
       <div class="column">
-        <div class="card fancy_card">
+        <div class="card cards fancy_card">
           <div class="card-image has-item-centered">
             <figure class="image is-128x128">
               <img src="~/assets/img/world.svg" alt />
@@ -194,5 +188,9 @@ page-enter-active,
 .box-shadow {
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
     1px 3px 8px rgba(39, 44, 49, 0.03);
+}
+
+.cards {
+  height: 400px;
 }
 </style>
