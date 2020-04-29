@@ -1,7 +1,7 @@
 {
   "name": "covid-africa",
   "version": "1.0.0",
-  "description": "Static Website of Covid Africa",
+  "description": "Covid Africa - Updated Data and Live Tracking",
   "author": "Covid Africa",
   "private": true,
   "scripts": {
