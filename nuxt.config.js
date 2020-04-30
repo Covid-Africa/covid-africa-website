@@ -22,11 +22,6 @@ export default {
         content: 'vEDBqIkTecht48dmoYXwxESgIzNgTpg58p0RJJRP2Nk'
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
   },
   /*
    ** Customize the progress-bar color
