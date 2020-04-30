@@ -2,6 +2,18 @@
   "name": "covidafrica",
   "version": "1.0.0",
   "description": "Covid Africa - Updated Data and Live Tracking",
+  "keywords": [
+    "tracking",
+    "covid19",
+    "africa",
+    "data",
+    "charts"
+  ],
+  "homepage": "www.covidafrica.info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Covid-Africa/covid-africa-website.git"
+  },
   "author": "Covid Africa",
   "private": true,
   "scripts": {
