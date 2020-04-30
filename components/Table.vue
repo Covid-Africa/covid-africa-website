@@ -1,5 +1,5 @@
 <template>
-  <div class="fancy_card">
+  <div class>
     <b-table
       :data="data"
       ref="multiSortTable"
@@ -12,21 +12,31 @@
       :sticky-header="stickyHeaders"
     >
       <template slot-scope="props">
-        <b-table-column field="name" label="Pays" sortable searchable>{{
+        <b-table-column field="name" label="Country" sortable searchable>
+          {{
           props.row.name
-        }}</b-table-column>
-        <b-table-column field="case_number" label="Nombres de cas" sortable>{{
+          }}
+        </b-table-column>
+        <b-table-column field="caseNumber" label="Cases number" sortable>
+          {{
           props.row.case_number
-        }}</b-table-column>
-        <b-table-column field="case_death" label="Nombre de décès" sortable>{{
+          }}
+        </b-table-column>
+        <b-table-column field="activeCase" label="Active Cases" sortable>
+          {{
+          props.row.active_case
+          }}
+        </b-table-column>
+        <b-table-column field="caseDeath" label="Deaths number" sortable>
+          {{
           props.row.case_death
-        }}</b-table-column>
+          }}
+        </b-table-column>
         <b-table-column
-          field="case_recovered"
-          label="Nombre de guéris"
+          field="caseRecovered"
+          label="Cases recovered"
           sortable
-          >{{ props.row.case_recovered }}</b-table-column
-        >
+        >{{ props.row.case_recovered }}</b-table-column>
       </template>
     </b-table>
   </div>

@@ -17,7 +17,7 @@
 
 <script>
 import axios from "axios";
-import LineChart from "./Chart.vue";
+import LineChart from "./Line.vue";
 export default {
   components: {
     LineChart
@@ -47,7 +47,7 @@ export default {
         this.total_deaths = response.data.map(
           total_death => total_death.total_deaths
         );
-        this.labels = response.data.map(date => date.date);
+        this.labels = response.data.map(date => date.dates);
 
         this.datacollection = {
           total_cases: this.total_cases,
@@ -60,8 +60,10 @@ export default {
 </script>
 
 <style lang="css">
-.linearchart {
-  width: 522px;
-  height: 345px;
+@media (min-width: 768px) {
+  .linearchart {
+    width: 522px;
+    height: 345px;
+  }
 }
 </style>

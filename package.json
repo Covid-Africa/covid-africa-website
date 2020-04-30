@@ -1,7 +1,19 @@
 {
-  "name": "covid-africa-website",
+  "name": "covidafrica",
   "version": "1.0.0",
-  "description": "Static Website of Covid Africa",
+  "description": "Covid Africa - Updated Data and Live Tracking",
+  "keywords": [
+    "tracking",
+    "covid19",
+    "africa",
+    "data",
+    "charts"
+  ],
+  "homepage": "www.covidafrica.info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Covid-Africa/covid-africa-website.git"
+  },
   "author": "Covid Africa",
   "private": true,
   "scripts": {
@@ -20,6 +32,7 @@
     "d3": "^5.15.1",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
+    "nuxt-ssr-cache": "^1.5.1",
     "vue-chartjs": "^3.5.0",
     "vue-google-charts": "^0.3.2",
     "vue-meta": "^2.3.3"

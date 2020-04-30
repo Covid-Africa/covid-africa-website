@@ -65,9 +65,9 @@ export default {
     axios
       .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
       .then(response => {
-        var datacollection = response.data;
-        for (let index = 0; index < datacollection.length; index++) {
-          const element = datacollection[index];
+        var dataCollection = response.data;
+        for (let index = 0; index < dataCollection.length; index++) {
+          const element = dataCollection[index];
 
           this.data.push([element.name, element.case_number]);
         }

@@ -5,12 +5,8 @@
         <Table />
       </b-tab-item>
 
-      <b-tab-item label="Pie Chart" disabled>
-        Lorem <br />
-        ipsum <br />
-        dolor <br />
-        sit <br />
-        amet.
+      <b-tab-item label="Doughnut">
+        <DoughnutChart class="has-item-centered" />
       </b-tab-item>
 
       <b-tab-item label="Per Country" disabled>
@@ -24,9 +20,11 @@
 
 <script>
 import Table from "./Table";
+import DoughnutChart from "./DoughnutChart.vue";
 export default {
   components: {
-    Table
+    Table,
+    DoughnutChart
   }
 };
 </script>
