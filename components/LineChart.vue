@@ -9,7 +9,7 @@
       ></line-chart>
 
       <div class="content has-text-link">
-        <a href="#">Linear View</a>
+        <a class="title is-5 has-text-link" href="#">Linear View</a>
       </div>
     </div>
   </div>

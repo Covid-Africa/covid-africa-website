@@ -13,7 +13,7 @@
       />
     </div>
     <div class="content has-text-link">
-      <a href="#">Map View</a>
+      <a class="title is-5 has-text-link" href="#">Map View</a>
     </div>
   </div>
 </template>
