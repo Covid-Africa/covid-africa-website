@@ -11,7 +11,7 @@
 
           <h3 class="title is-3 has-text-grey-light">Countries</h3>
 
-          <h2 class="title is-2">{{ countryLen }} / 56</h2>
+          <h2 class="title is-2">{{ countryLen }} / 57</h2>
         </div>
       </div>
       <div class="column has-text-centered">
