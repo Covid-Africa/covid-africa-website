@@ -37,9 +37,9 @@ export default {
     axios
       .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
       .then(response => {
-        var data = response.data;
-        var case_number = data.map(case_number => case_number.case_number);
-        var label = data.map(label => label.name);
+        const data = response.data;
+        const case_number = data.map(case_number => case_number.case_number);
+        const label = data.map(label => label.name);
 
         this.caseNumber = case_number;
         this.labels = label;

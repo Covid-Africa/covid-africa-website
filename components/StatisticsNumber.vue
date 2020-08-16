@@ -70,19 +70,19 @@ export default {
     axios
       .get(`https://covidafrica-api.herokuapp.com/api/africa`)
       .then(response => {
-        var dataTemp = response.data;
+        const dataTemp = response.data;
 
         this.data = dataTemp[dataTemp.length - 1];
         this.deathRate = (this.data.total_deaths / this.data.total_cases) * 100;
         this.deathRate = this.deathRate.toFixed(2);
 
-        var dateFromAPI = dataTemp[1].updated_at;
+        const dateFromAPI = dataTemp[1].updated_at;
 
-        var now = new Date();
-        var datefromAPITimeStamp = new Date(dateFromAPI).getTime();
-        var nowTimeStamp = now.getTime();
+        const now = new Date();
+        const datefromAPITimeStamp = new Date(dateFromAPI).getTime();
+        const nowTimeStamp = now.getTime();
 
-        var microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
+        const microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
         // Number of milliseconds per day =
         //   24 hrs/day * 60 minutes/hour * 60 seconds/minute * 1000 msecs/second
         this.updateDate = Math.floor(microSecondsDiff / 60 / 60 / 24);
