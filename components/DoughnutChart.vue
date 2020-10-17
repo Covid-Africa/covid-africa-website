@@ -14,7 +14,6 @@
 <script>
 import axios from "axios";
 import DoughnutChart from "./Doughnut.vue";
-import {API_URL} from "../utils/api";
 export default {
   components: {
     DoughnutChart
@@ -36,11 +35,11 @@ export default {
 
   created() {
     axios
-      .get(`${API_URL}/africa/countries`)
+      .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
       .then(response => {
-        let data = response.data;
-        let case_number = data.map(case_number => case_number.case_number);
-        let label = data.map(label => label.name);
+        const data = response.data;
+        const case_number = data.map(case_number => case_number.case_number);
+        const label = data.map(label => label.name);
 
         this.caseNumber = case_number;
         this.labels = label;
