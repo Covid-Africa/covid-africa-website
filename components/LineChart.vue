@@ -40,7 +40,6 @@ export default {
     axios
       .get("https://covidafrica-api.herokuapp.com/api/africa")
       .then(response => {
-        var datacollection = response.data;
         this.total_cases = response.data.map(
           total_case => total_case.total_cases
         );

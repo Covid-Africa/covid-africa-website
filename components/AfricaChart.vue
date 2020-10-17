@@ -6,7 +6,7 @@
 
 <script>
 import axios from "axios";
-import API_URL from "~/store/api.js";
+import {API_URL} from "../utils/api";
 
 export default {
   data() {
@@ -17,7 +17,7 @@ export default {
 
   created() {
     axios
-      .get(`http://127.0.0.1:8000/api/countries`)
+      .get(`${API_URL}/countries`)
       .then(response => {
         this.info = response.data;
       })

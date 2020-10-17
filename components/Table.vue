@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import API_URL from "../store/api.js";
+import API_URL from "../utils/api.js";
 import orderBy from "lodash/orderBy";
 import axios from "axios";
 
@@ -116,7 +116,7 @@ export default {
   },
   created() {
     axios
-      .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
+      .get(`${API_URL}/africa/countries`)
       .then(response => {
         this.data = response.data;
       });

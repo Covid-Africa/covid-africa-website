@@ -58,11 +58,10 @@ export default {
   },
   methods: {
     timeConvert(n) {
-      var num = n;
-      var hours = num / 60;
-      var rhours = Math.floor(hours);
-      var minutes = (hours - rhours) * 60;
-      var rminutes = Math.round(minutes);
+      let hours = num / 60;
+      let rhours = Math.floor(hours);
+      let minutes = (hours - rhours) * 60;
+      let rminutes = Math.round(minutes);
       return rminutes + " minute(s)";
     }
   },
@@ -70,19 +69,19 @@ export default {
     axios
       .get(`https://covidafrica-api.herokuapp.com/api/africa`)
       .then(response => {
-        var dataTemp = response.data;
+        let dataTemp = response.data;
 
         this.data = dataTemp[dataTemp.length - 1];
         this.deathRate = (this.data.total_deaths / this.data.total_cases) * 100;
         this.deathRate = this.deathRate.toFixed(2);
 
-        var dateFromAPI = dataTemp[1].updated_at;
+        let dateFromAPI = dataTemp[1].updated_at;
 
-        var now = new Date();
-        var datefromAPITimeStamp = new Date(dateFromAPI).getTime();
-        var nowTimeStamp = now.getTime();
+        let now = new Date();
+        let datefromAPITimeStamp = new Date(dateFromAPI).getTime();
+        let nowTimeStamp = now.getTime();
 
-        var microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
+        let microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
         // Number of milliseconds per day =
         //   24 hrs/day * 60 minutes/hour * 60 seconds/minute * 1000 msecs/second
         this.updateDate = Math.floor(microSecondsDiff / 60 / 60 / 24);
@@ -95,8 +94,8 @@ export default {
       .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
       .then(response => {
         this.countryLen = response.data.length;
-        var sum = 0;
-        var sum2 = 0;
+        let sum = 0;
+        let sum2 = 0;
         for (let index = 0; index < response.data.length; index++) {
           sum += response.data[index].case_recovered;
           sum2 += response.data[index].case_number;
