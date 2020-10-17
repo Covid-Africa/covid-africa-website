@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-tabs type="is-toggle-rounded" position="is-centered">
+    <b-tabs type="is-toggle-rounded" position="is-centered" expanded>
       <b-tab-item label="Table">
         <Table />
       </b-tab-item>

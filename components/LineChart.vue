@@ -9,7 +9,7 @@
       ></line-chart>
 
       <div class="content has-text-link">
-        <a href="#">Linear View</a>
+        <a class="title is-5 has-text-link" href="#">Linear View</a>
       </div>
     </div>
   </div>
@@ -18,6 +18,9 @@
 <script>
 import axios from "axios";
 import LineChart from "./Line.vue";
+import  {API_URL} from "../utils/api";
+
+
 export default {
   components: {
     LineChart
@@ -38,9 +41,8 @@ export default {
 
   created() {
     axios
-      .get("https://covidafrica-api.herokuapp.com/api/africa")
+      .get(`${API_URL}/africa`)
       .then(response => {
-        var datacollection = response.data;
         this.total_cases = response.data.map(
           total_case => total_case.total_cases
         );

@@ -13,7 +13,7 @@
       />
     </div>
     <div class="content has-text-link">
-      <a href="#">Map View</a>
+      <a class="title is-5 has-text-link" href="#">Map View</a>
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@
 <script>
 import { GChart } from "vue-google-charts";
 import axios from "axios";
+import {API_URL} from "../utils/api";
 
 export default {
   components: {
@@ -44,7 +45,7 @@ export default {
 
       this.chartData.addRows(this.data);
       // For each orgchart box, provide the name, manager, and tooltip to show.
-      var options = {
+      let options = {
         region: "002", // Africa
         colorAxis: { colors: ["#FFA07A", "#FA8072", "#DC143C"] },
         backgroundColor: "transparent",
@@ -53,7 +54,7 @@ export default {
       };
 
       // Create the chart.
-      var chart = new google.visualization.GeoChart(
+      let chart = new google.visualization.GeoChart(
         document.getElementById("tree")
       );
       // Draw the chart, setting the allowHtml option to true for the tooltips.
@@ -63,9 +64,9 @@ export default {
 
   created() {
     axios
-      .get(`https://covidafrica-api.herokuapp.com/api/africa/countries`)
+      .get(`${API_URL}/africa/countries`)
       .then(response => {
-        var dataCollection = response.data;
+        let dataCollection = response.data;
         for (let index = 0; index < dataCollection.length; index++) {
           const element = dataCollection[index];
 
