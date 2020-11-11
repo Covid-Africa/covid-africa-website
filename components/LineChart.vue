@@ -32,8 +32,8 @@ export default {
       datacollection: null,
       labels: [],
       dates: [],
-      total_cases: [],
-      total_deaths: [],
+      totalCases: [],
+      totalDeaths: [],
       loaded: false
     };
   },
@@ -43,17 +43,17 @@ export default {
     axios
       .get(`${API_URL}/africa`)
       .then(response => {
-        this.total_cases = response.data.map(
+        this.totalCases = response.data.map(
           total_case => total_case.total_cases
         );
-        this.total_deaths = response.data.map(
+        this.totalDeaths = response.data.map(
           total_death => total_death.total_deaths
         );
         this.labels = response.data.map(date => date.dates);
 
         this.datacollection = {
-          total_cases: this.total_cases,
-          total_deaths: this.total_deaths
+          total_cases: this.totalCases,
+          total_deaths: this.totalDeaths
         };
         this.loaded = true;
       });

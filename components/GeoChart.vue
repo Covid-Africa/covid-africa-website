@@ -1,7 +1,7 @@
 <template>
   <div class="fancy_card">
     <div id="tree">
-      <GChart
+      <GChart :key="key"
         :settings="{
           packages: ['geochart'],
           callback: () => {
@@ -32,7 +32,8 @@ export default {
       // Array will be automatically processed with visualization.arrayToDataTable function
       chartData: null,
       data: [],
-      loaded: false
+      loaded: false,
+      key: null
     };
   },
   methods: {
@@ -74,6 +75,8 @@ export default {
         }
         //console.log(JSON.parse(JSON.stringify(this.data)));
       });
+
+    this.key = Math.random() * 10000;
   }
 };
 </script>
